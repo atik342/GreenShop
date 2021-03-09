@@ -86,17 +86,33 @@ namespace ClassLibrary
             }
         }
 
-        public bool Find(int orderLineID)
+        public bool Find(int OrderLineID)
         {
-            //set the private data members to the test data value
-            mOrderLineID = 21;
-            mProductID = 212;
-            mOrderID = 12;
-            mProductDetails = "this is your product";
-            mProductQuantity = 3;
-            mShippingstatus = true;
-            //always return true
-            return true;
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add parameter for the address no to search for
+            DB.AddParameter("@OrderLineID", OrderLineID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblOrderLine_FilterByOrderLineID");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data members
+                mOrderLineID = Convert.ToInt32(DB.DataTable.Rows[0]["OrderLineID"]);
+                mOrderID = Convert.ToInt32(DB.DataTable.Rows[0]["OrderID"]);
+                mProductID = Convert.ToInt32(DB.DataTable.Rows[0]["ProductID"]);
+                mProductDetails = Convert.ToString(DB.DataTable.Rows[0]["ProductDetails"]);
+                mProductQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["ProductQuantity"]);
+                mShippingstatus = Convert.ToBoolean(DB.DataTable.Rows[0]["ShippingStatus"]);
+                //return true if everything is working ok
+                return true;
+            }
+            //if no record was found
+             else
+            {
+                //return false indicating a problem
+                return false;
+            }
         }
     }
 }

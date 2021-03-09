@@ -70,7 +70,7 @@ namespace Testing4
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with this method
-            Int32 OrderLineID = 21;
+            Int32 OrderLineID = 12;
             //invoke the method
             Found = AnOrderLine.Find(OrderLineID);
             //test to see if the result is true
@@ -86,11 +86,11 @@ namespace Testing4
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderLineID = 21;
+            Int32 OrderLineID = 12;
             //invoke the method
             Found = AnOrderLine.Find(OrderLineID);
             //check the orderid
-            if (AnOrderLine.OrderLineID != 21)
+            if (AnOrderLine.OrderLineID != 12)
             {
                 OK = false;
             }
@@ -107,7 +107,7 @@ namespace Testing4
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderLineID = 21;
+            Int32 OrderLineID = 12;
             //invoke the method
             Found = AnOrderLine.Find(OrderLineID);
             //check the orderid
@@ -128,11 +128,11 @@ namespace Testing4
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderLineID = 21;
+            Int32 OrderLineID = 12;
             //invoke the method
             Found = AnOrderLine.Find(OrderLineID);
             //check the orderid
-            if (AnOrderLine.OrderID != 12)
+            if (AnOrderLine.OrderID != 21)
             {
                 OK = false;
             }
@@ -149,7 +149,7 @@ namespace Testing4
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderLineID = 21;
+            Int32 OrderLineID = 12;
             //invoke the method
             Found = AnOrderLine.Find(OrderLineID);
             //check the orderid
@@ -170,7 +170,7 @@ namespace Testing4
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderLineID = 21;
+            Int32 OrderLineID = 12;
             //invoke the method
             Found = AnOrderLine.Find(OrderLineID);
             //check the orderid
@@ -191,7 +191,7 @@ namespace Testing4
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with this method
-            Int32 OrderLineID = 21;
+            Int32 OrderLineID = 12;
             //invoke the method
             Found = AnOrderLine.Find(OrderLineID);
             //check the orderid
