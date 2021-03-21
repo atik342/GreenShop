@@ -32,23 +32,6 @@
         <asp:TextBox ID="txtPrice" runat="server"></asp:TextBox>
         <br />
         <br />
-        <br />
-        <asp:Label ID="lblOrderLineID" runat="server" Text="OrderLine ID" width="105px"></asp:Label>
-&nbsp;<asp:TextBox ID="txtOrderLineID" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label ID="lblProductID" runat="server" Text="Product ID" width="105px"></asp:Label>
-&nbsp;<asp:TextBox ID="txtProductID" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label ID="lblProductDetails" runat="server" Text="Product Details" width="105px"></asp:Label>
-&nbsp;<asp:TextBox ID="txtProductDetails" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label ID="lblProductQuantity" runat="server" Text="Product Quantity" width="105px"></asp:Label>
-&nbsp;<asp:TextBox ID="txtProductQuantity" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <asp:CheckBox ID="chkShippingStatus" runat="server" Text="Shipping Status" />
-        <br />
-        <br />
         <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" Text="OK" />
         <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
     </form>
