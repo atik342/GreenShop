@@ -46,4 +46,9 @@ public partial class _1_DataEntry : System.Web.UI.Page
             txtPrice.Text = AnOrder.Price.ToString();
         }
     }
+
+    protected void btnFind2_Click(object sender, EventArgs e)
+    {
+     
+    }
 }

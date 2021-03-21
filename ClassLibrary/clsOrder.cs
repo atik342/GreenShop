@@ -100,5 +100,10 @@ namespace ClassLibrary
                 return false;
             }
         }
+
+        public string Valid(string customerID, string orderDetails, string price, string dateOrdered)
+        {
+            return "";
+        }
     }
 }
