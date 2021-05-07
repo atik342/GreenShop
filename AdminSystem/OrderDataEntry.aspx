@@ -32,6 +32,9 @@
         <asp:TextBox ID="txtPrice" runat="server"></asp:TextBox>
         <br />
         <br />
+        [<asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
+        ]<br />
+        <br />
         <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" Text="OK" />
         <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
     </form>
