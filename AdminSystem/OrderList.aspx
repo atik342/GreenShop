@@ -9,7 +9,22 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:ListBox ID="lblOrderList" runat="server" Height="167px" Width="327px"></asp:ListBox>
         </div>
-    </form>
+        <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add" />
+        <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" Text="Edit" />
+        <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" />
+        <br />
+        <br />
+        Enter Customer ID
+        <asp:TextBox ID="txtFilter" runat="server" Height="22px" OnTextChanged="txtFilter_TextChanged"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="btnApply" runat="server" OnClick="btnApply_Click" Text="Apply" />
+        <asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" />
+        <br />
+        <br />
+        [<asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
+        ]</form>
 </body>
 </html>

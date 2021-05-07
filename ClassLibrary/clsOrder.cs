@@ -73,6 +73,13 @@ namespace ClassLibrary
             }
         }
 
+        public object Active { get; set; }
+
+        public void Add()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Find(int OrderID)
         {
             //create an instance of the data connection
@@ -103,7 +110,74 @@ namespace ClassLibrary
 
         public string Valid(string customerID, string orderDetails, string price, string dateOrdered)
         {
-            return "";
+            //create a string variable to store the error
+            String Error = "";
+            //create temporary variable to store data values
+            DateTime DateTemp;
+            //if the customerid is blank
+            if (customerID.Length == 0 )
+            {
+                //record the error
+                Error = Error + "The Customer ID may not be blank : ";
+            }
+            //if the customerid is greater than 6 characters
+            if(customerID.Length>6)
+            {
+                //record the error
+                Error = Error + "The Customer ID must me less than six characters : ";
+            }
+            try
+            {
+            //copy the dateAdded value to the DateTemp variable
+            DateTemp = Convert.ToDateTime(dateOrdered);
+            if(DateTemp < DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + " The date can not be in the past : ";
+            }
+            //check to see if the date is greater than todays date
+            if ( DateTemp> DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + " The date can not be in the future";
+            }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date was not a valid date : ";
+            }
+            //is the OrderDetails blank
+            if(orderDetails.Length == 0)
+            {
+                //record the error
+                Error = Error + "The OrderDetails may not be blank : ";
+            }
+            //if the orderDetails is too long
+            if(orderDetails.Length >50)
+            {
+                //record the error
+                Error = Error + "The orderdetails must be less than 50 characters : ";
+            }
+            //if the price blank
+            if(price.Length == 0 )
+            {
+                //record the error
+                Error = Error + "the price can not be blank : ";
+            }
+            //if the price is too long
+            if(price.Length >50)
+            {
+                //record the error
+                Error = Error + "The price must be less than 50 characters";
+            }
+            //return any error message
+            return Error;
         }
+    }
+
+    public class chkActive
+    {
+        public static object Checked { get; set; }
     }
 }
